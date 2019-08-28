@@ -1,0 +1,123 @@
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.main .search {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 999;
+}
+
+.main .main_content {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  /* 让content区域可以滚动s */
+  overflow-y: auto;
+}
+
+/* 隐藏overflow-y: auto生成的滚动条 */
+.main .main_content::-webkit-scrollbar {
+  width: 0 !important
+}
+.main .main_content {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.main .main_content .ui.grid {
+  /* margin: 0; */
+}
+
+.main .main_content i.icon {
+  border-radius: 31px;
+  color: #fff;
+  height: 62px;
+  width: 62px;
+  line-height: 62px;
+}
+
+.main .main_content p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main .main_content .ui.grid>.row>.column {
+  margin-bottom: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(4n) {
+  border: none;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(1) i.icon {
+  background-color: #0ac250;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(2) i.icon {
+  background-color: #ff611a;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(3) i.icon {
+  background-color: #f6b906;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(4) i.icon {
+  background-color: #4f99e4;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(5) i.icon {
+  background-color: #fd8701;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(6) i.icon {
+  background-color: #23acf2;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(7) i.icon {
+  background-color: #eb1e03;
+}
+
+.main .main_content .ui.grid>.row>.column:nth-child(8) i.icon {
+  background-color: #7ccc39;
+}
+
+
+/*咨询区样式*/
+.main_content .ui.unstackable.items>.item>.image,
+.ui.unstackable.items>.item>.image>img {
+  width: 50px !important;
+  height: 50px !important;
+  margin-left: 10px;
+}
+
+.main_content .ui.items>.item>.content {
+  height: 50px;
+  position: relative;
+}
+
+.main_content .ui.items>.item>.content div {
+  width: 70%;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-left: 10px;
+  /* 不换行，超出省略号显示*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main_content .ui.items>.item>.content i {
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -29,3 +29,27 @@ import 'semantic-ui-css/semantic.min.css'
   ```jsx
     import {Button} from 'semantic-ui-react'
   ``` 
+- 注意`Form`组件的使用，内部有配置的点选组件，不需要额外加载类似`Input`、`Button`等组件，直接用`Form`自带的即可，这样可以较少加载项，提高性能
+---
+## 3. 登录页
+### 3.1 `axios`的使用
+- 由于多个组件会用到，所以在`index.js`中，把`axios`绑定在`React.Component.prototype`上
+- 根据接口设置`axios`的基本路径
+- 拦截器的设置
+### 3.2 编程式导航
+- `import { withRouter } from 'react-router-dom'`
+- `export default withRouter(Login)`
+- 这样就能在组件中通过`props`获取到`history`对象，里面有各种跳转方式
+- `semantic-ui-react`的使用
+
+---
+## 4. 进入界面后
+### 4.1 将主界面作为一个大的出口`Route`
+### 4.2 下面都是`NavLink`
+### 4.3 设置子组件
+
+--- 
+## 5. `main`页面
+### 5.1 轮播图组件`react-iamge-gallery`的使用
+- 参考`github`文档 
+[文档地址](https://github.com/xiaolin/react-image-gallery)
