@@ -50,6 +50,7 @@
 .main .main_content .ui.grid>.row>.column {
   margin-bottom: 10px;
   border-right: 1px solid #ccc;
+  text-align: center;
 }
 
 .main .main_content .ui.grid>.row>.column:nth-child(4n) {

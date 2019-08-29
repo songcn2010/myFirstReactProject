@@ -1,0 +1,51 @@
+.info {
+  height: 100%;
+  width: 100%;
+}
+
+.info_title {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: skyblue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.info_content {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  height: 100%;
+  width: 100%;
+}
+.info_content>div{
+  height: 100%;
+}
+
+/* 重置tab栏的边框 */
+.info_content .ui.tabular.menu {
+  border: none;
+  background-color: #ccc;
+}
+
+.info_content .ui.attached:not(.message)+.ui.attached.segment:not(.top) {
+  border: none;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 40px;
+}
+
+/* 隐藏overflow-y: auto生成的滚动条 */
+.info_content .ui.attached:not(.message)+.ui.attached.segment:not(.top)::-webkit-scrollbar {
+  width: 0 !important
+}
+.info_content .ui.attached:not(.message)+.ui.attached.segment:not(.top) {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.info_content .ui.items>.item {
+  padding-top: 10px;
+}

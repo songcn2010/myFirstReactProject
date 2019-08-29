@@ -48,6 +48,8 @@ class Login extends React.Component {
     //判断结果
     if(meta.status === 200){
       localStorage.setItem('token',data.token);
+      //因为后面用户中心要用到id
+      localStorage.setItem('uid',data.uid);
       setTimeout(() => {
         this.props.history.push('/home');
       },1000)

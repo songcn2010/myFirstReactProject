@@ -9,7 +9,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 // 引入轮播图组件  注意，这些只需要在本页引用，因为只有这里要用
 import ImageGallery from 'react-image-gallery';
 
-import { Input, Grid, Icon, Item } from 'semantic-ui-react';
+import { Input, Grid, Icon } from 'semantic-ui-react';
 
 
 
@@ -45,11 +45,13 @@ class Main extends React.Component {
 
   //获取咨询列表
   getInfoList = async () => {
-    let res = await this.axios.post('homes/info');
+    let res = await this.axios.post(`homes/info`);
     // console.log(res)
-    this.setState({
-      infoList: res.data.list
-    })
+    if(res.meta.status === 200){
+      this.setState({
+        infoList: res.data.list
+      })
+    }
   }
 
   //获取菜单数据
@@ -64,7 +66,7 @@ class Main extends React.Component {
   }
 
   //页面加载完成，需要发送请求获取轮播图数据
-  async componentDidMount() {
+  componentDidMount() {
     this.getImgList();
     this.getMenuList();
     this.getInfoList();
